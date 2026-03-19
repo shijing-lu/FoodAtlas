@@ -35,6 +35,7 @@ class MainActivity : ComponentActivity() {
 object Route {
     const val HOME = "home"
     const val RECIPE_DETAIL = "recipe_detail/{recipeId}"
+    const val ADD_RECIPE = "add_recipe"
     
     fun createRecipeDetailRoute(recipeId: String): String = "recipe_detail/$recipeId"
 }
@@ -56,7 +57,25 @@ fun FoodAtlasNavGraph() {
             HomeScreen(
                 onRecipeClick = { recipe ->
                     navController.navigate(Route.createRecipeDetailRoute(recipe.id))
+                },
+                onAddRecipeClick = {
+                    navController.navigate(Route.ADD_RECIPE)
                 }
+            )
+        }
+
+        // --- Add Recipe Screen ---
+        composable(
+            route = Route.ADD_RECIPE,
+            enterTransition = {
+                slideIntoContainer(towards = AnimatedContentTransitionScope.SlideDirection.Up, animationSpec = tween(300))
+            },
+            popExitTransition = {
+                slideOutOfContainer(towards = AnimatedContentTransitionScope.SlideDirection.Down, animationSpec = tween(300))
+            }
+        ) {
+            com.example.foodatlas.feature.home.AddRecipeScreen(
+                onClose = { navController.popBackStack() }
             )
         }
 

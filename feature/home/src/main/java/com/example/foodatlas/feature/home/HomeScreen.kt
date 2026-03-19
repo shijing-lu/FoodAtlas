@@ -36,7 +36,8 @@ import com.example.foodatlas.core.designsystem.theme.OnPrimary
 
 @Composable
 fun HomeScreen(
-    onRecipeClick: (Recipe) -> Unit = {}
+    onRecipeClick: (Recipe) -> Unit = {},
+    onAddRecipeClick: () -> Unit = {}
 ) {
     var selectedCategory by remember { mutableStateOf("全部") }
 
@@ -52,7 +53,7 @@ fun HomeScreen(
         bottomBar = { FoodAtlasBottomBar() },
         floatingActionButton = {
             FloatingActionButton(
-                onClick = { /* TODO: Add recipe */ },
+                onClick = onAddRecipeClick,
                 containerColor = Color(0xFFCC5500), // Burnt orange from design spec
                 contentColor = OnPrimary,
                 shape = CircleShape
