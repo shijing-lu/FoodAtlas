@@ -22,4 +22,7 @@ dependencyResolutionManagement {
 rootProject.name = "Food Atlas"
 include(":app")
 include(":core:designsystem")
-include(":feature:home") 
+include(":core:database")
+include(":core:model")
+include(":core:data")
+include(":feature:home")

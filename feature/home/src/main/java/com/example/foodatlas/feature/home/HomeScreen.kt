@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.foodatlas.core.designsystem.theme.Primary
 import com.example.foodatlas.core.designsystem.theme.OnPrimary
+import com.example.foodatlas.core.model.Recipe
 
 @Composable
 fun HomeScreen(

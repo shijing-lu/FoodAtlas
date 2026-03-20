@@ -15,6 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.foodatlas.core.designsystem.theme.FoodAtlasTheme
+import com.example.foodatlas.core.model.Recipe
 import com.example.foodatlas.feature.home.HomeScreen
 import com.example.foodatlas.feature.home.RecipeDetailScreen
 import com.example.foodatlas.feature.home.fakeRecipes

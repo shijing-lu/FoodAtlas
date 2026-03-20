@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.foodatlas"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -58,5 +58,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":core:designsystem"))
+    implementation(project(":core:model"))
     implementation(project(":feature:home"))
 }

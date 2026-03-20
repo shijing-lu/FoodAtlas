@@ -1,23 +1,7 @@
 package com.example.foodatlas.feature.home
 
-data class Recipe(
-    val id: String,
-    val title: String,
-    val imageUrl: String,
-    val lastCookedInfo: String,
-    val category: String,
-    val cookTime: String = "",
-    val difficulty: String = "",
-    val cookCount: Int = 0,           // 累计制作次数
-    val daysSinceLastCook: Int? = null, // 距上次制作天数, null = 从未做过
-    val ingredients: List<Ingredient> = emptyList(),
-    val steps: List<String> = emptyList()
-)
-
-data class Ingredient(
-    val name: String,
-    val amount: String
-)
+import com.example.foodatlas.core.model.Recipe
+import com.example.foodatlas.core.model.Ingredient
 
 data class HomeUiState(
     val isLoading: Boolean = false,

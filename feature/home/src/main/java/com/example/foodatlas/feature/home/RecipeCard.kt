@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.foodatlas.core.designsystem.theme.SurfaceContainerLowest
 import com.example.foodatlas.core.designsystem.theme.Primary
+import com.example.foodatlas.core.model.Recipe
 
 @Composable
 fun RecipeGridCard(

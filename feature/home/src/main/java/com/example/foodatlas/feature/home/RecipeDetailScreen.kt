@@ -43,6 +43,8 @@ import com.example.foodatlas.core.designsystem.theme.Primary
 import com.example.foodatlas.core.designsystem.theme.SecondaryContainer
 import com.example.foodatlas.core.designsystem.theme.SurfaceContainerLow
 import com.example.foodatlas.core.designsystem.theme.SurfaceContainerLowest
+import com.example.foodatlas.core.model.Ingredient
+import com.example.foodatlas.core.model.Recipe
 
 @Composable
 fun RecipeDetailScreen(
